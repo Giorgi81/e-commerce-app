@@ -1,0 +1,2 @@
+ALTER TABLE product
+ALTER COLUMN id type BIGINT
