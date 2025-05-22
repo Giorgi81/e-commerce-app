@@ -7,13 +7,10 @@ import com.product.product.dto.ProductResponseDTO;
 import com.product.product.entity.Product;
 import com.product.product.exception.ProductPurchaseException;
 import com.product.product.mapper.ProductMapper;
-import com.product.product.mapper.ProductMapperImpl;
 import com.product.product.repository.ProductRepository;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.validation.Valid;
 import jakarta.ws.rs.NotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.apache.hc.core5.http.impl.routing.PathRoute;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -29,7 +26,6 @@ public class ProductService {
 
     private final ProductRepository productRepository;
     private final ProductMapper productMapper;
-    private final ProductMapperImpl productMapperImpl;
 
 
     public ProductResponseDTO createProduct(ProductRequestDTO productRequestDTO) {
@@ -91,6 +87,7 @@ public class ProductService {
                 quantity
         );
     }
+
 
     public ProductResponseDTO getProductById(Long id) {
         return productRepository.findById(id).map(productMapper::toResponseDTO).orElseThrow(() -> new NotFoundException(""));

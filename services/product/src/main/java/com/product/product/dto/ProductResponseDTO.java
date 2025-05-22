@@ -1,8 +1,6 @@
 package com.product.product.dto;
-
-
-
 import java.math.BigDecimal;
+
 
 public record ProductResponseDTO(
 

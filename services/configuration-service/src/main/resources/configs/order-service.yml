@@ -1,0 +1,33 @@
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping:orderConfirmationDTO: com.order.order.dto.OrderConfirmationDTO
+  datasource:
+    url: jdbc:postgresql://localhost:4000/order
+    username: giorgijgerenaia
+    password: giorgijgerenaia
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    baseline-on-migrate: true
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8060
+
+
+application:
+  config:
+    customer-url: http://localhost:8222/api/v1/customer
+    payment-url: http://localhost:8222/api/v1/payment
+    product-url: http://localhost:8222/api/v1/product
+
+
+

@@ -1,11 +1,11 @@
-<mxfile host="drawio-plugin" modified="2025-05-11T23:32:16.946Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="74ZiMoOgHv0XF8my_j8A" version="22.1.22" type="embed" pages="6">
+<mxfile host="drawio-plugin" modified="2025-05-22T23:00:00.479Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="Joha1hudpb3FwDFh4w0G" version="22.1.22" type="embed" pages="6">
   <diagram id="VbmSNMpitOyS2P8errUJ" name="global-architecture">
-    <mxGraphModel dx="1548" dy="914" grid="0" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1379" dy="1154" grid="0" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="xCOBlcEBNlZvq0qhSWPW-67" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="175" y="57" width="1418" height="743" as="geometry" />
+          <mxGeometry x="-163" y="39" width="1418" height="743" as="geometry" />
         </mxCell>
         <mxCell id="xCOBlcEBNlZvq0qhSWPW-52" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
           <mxGeometry x="1448" y="303.5" width="121" height="119" as="geometry" />

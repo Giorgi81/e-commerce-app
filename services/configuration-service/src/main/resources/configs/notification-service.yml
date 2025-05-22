@@ -1,0 +1,41 @@
+spring:
+  data:
+    mongodb:
+      username: giorgijgerenaia
+      password: giorgijgerenaia
+      host: localhost
+      authentication-database: admin
+      port: 27017
+      database: customer
+
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: notificationGroup
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      properties:
+        spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
+        spring.json.trusted.packages: "*"
+        spring.json.type.mapping: >
+          com.order.order.dto.OrderConfirmationDTO:com.services.notification.dto.OrderConfirmation,
+          com.services.payment.payment.dto.PaymentNotificationRequestDTO:com.services.notification.dto.PaymentConfirmation
+
+  mail:
+    host: localhost
+    port: 1025
+    protocol: smtp
+    username: ""
+    password: ""
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+
+server:
+  port: 8040

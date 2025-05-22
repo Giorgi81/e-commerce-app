@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+</head>
+<body style="font-family: Arial, sans-serif; color: #333;">
+<h2>Order Confirmation</h2>
+<p>Dear <strong th:text="${customerName}">Customer Name</strong>,</p>
+<p>Your order has been successfully placed. Here are the details:</p>
+
+<table style="margin-top: 20px;">
+    <tr>
+        <td><strong>Order Reference:</strong></td>
+        <td th:text="${orderReference}">ORD123456</td>
+    </tr>
+    <tr>
+        <td><strong>Total Quantity:</strong></td>
+        <td th:text="${quantity}">2</td>
+    </tr>
+</table>
+
+<h3 style="margin-top: 20px;">Products:</h3>
+<ul>
+    <li th:each="product : ${products}">
+        <span th:text="${product.name}">Product Name</span> -
+        <span th:text="${product.price}">99.99</span>
+    </li>
+</ul>
+
+<p style="margin-top: 30px;">We appreciate your business!</p>
+<p>The AndersenLab Team</p>
+</body>
+</html>

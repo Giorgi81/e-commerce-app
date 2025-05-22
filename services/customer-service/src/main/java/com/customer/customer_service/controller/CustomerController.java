@@ -5,9 +5,7 @@ import com.customer.customer_service.dto.CustomerRequestDTO;
 import com.customer.customer_service.dto.CustomerResponseDTO;
 import com.customer.customer_service.service.CustomerService;
 import jakarta.validation.Valid;
-import jakarta.ws.rs.Path;
 import lombok.RequiredArgsConstructor;
-import org.apache.coyote.Response;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,11 +19,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-import java.util.ResourceBundle;
-
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/customer")
 @RequiredArgsConstructor
 public class CustomerController {
 

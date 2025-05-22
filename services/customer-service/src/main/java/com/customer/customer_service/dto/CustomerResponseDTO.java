@@ -3,7 +3,6 @@ package com.customer.customer_service.dto;
 import com.customer.customer_service.entity.Address;
 import lombok.Builder;
 
-@Builder
 public record CustomerResponseDTO(
         String id,
         String firstName,

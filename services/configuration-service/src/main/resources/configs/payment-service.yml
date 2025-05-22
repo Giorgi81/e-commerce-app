@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:4000/payment
+    username: giorgijgerenaia
+    password: giorgijgerenaia
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      bootstrap-servers: localhost:9092
+      properties:
+        spring.json.type.mapping:PaymentNotificationRequestDTO: com.services.payment.payment.dto.PaymentNotificationRequestDTO
+
+server:
+  port: 8070
